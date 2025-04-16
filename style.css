@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #F4F4F4;
+}
+
+header {
+    background: #FFFFFF; /* White background for header */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and menu */
+}
+
+.logo-img {
+    max-width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 50px; /* Prominent header name */
+    font-weight: bold;
+    color: #FFA500; /* Orange for brand consistency */
+    text-transform: uppercase;
+}
+
+nav {
+    background: #003087; /* Dark blue, same as original menu bar */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allows links to wrap if needed */
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+}
+
+.nav-menu li a {
+    color: #FFFFFF; /* White for contrast on blue background */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-menu li a:hover {
+    color: #FFA500; /* Orange on hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #FFFFFF;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #003087;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FFA500;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #FF4500;
+}
+
+.features, .about, .courses, .contact {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.features h2, .about h1, .courses h1, .contact h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003087;
+}
+
+.feature-box, .course-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003087; /* Blue footer for consistency */
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-header {
+        flex-direction: column; /* Stack logo and text on mobile */
+        margin-bottom: 15px;
+    }
+    .logo-img {
+        max-width: 60px; /* Smaller logo on mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .logo-text {
+        font-size: 24px; /* Smaller text on mobile */
+    }
+    .nav-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
