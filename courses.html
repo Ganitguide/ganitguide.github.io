@@ -1,53 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - Ganit Guide</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - Ganit Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Smooth Entrance Animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Course Page Styles */
+    .courses {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .courses h1 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0074d9;
+      font-weight: bold;
+    }
+
+    /* Course Cards */
+    .courses-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .course-item {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .course-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-item h3 {
+      font-size: 24px;
+      color: #0074d9;
+      margin-bottom: 15px;
+    }
+
+    .course-item p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .course-item .btn {
+      padding: 12px 24px;
+      background-color: #0074d9;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .course-item .btn:hover {
+      background-color: #005fa3;
+    }
+
+    /* WhatsApp Chat Button */
+    .whatsapp-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-chat:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-         <div class="logo-header">
-                <img src="logo.png" alt="Ganit Guide Logo" class="logo-img">
-                <span class="logo-text">Ganit Guide</span>
-            </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo-header">
+      <img src="images/logo.png" alt="Ganit Guide Logo" class="logo-img" />
+      <div class="logo-names">
+        <div class="logo-text">Ganit Guide</div>
+        <div class="logo-bn-text">গণিত গাইড</div>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="courses">
-        <h1>Our Courses</h1>
-        <div class="course-box">
-            <h3>Class 10 Math</h3>
-            <p>Covers algebra, geometry, trigonometry, and more.</p>
-            <p><strong>Duration:</strong> 6 months | <strong>Fees:</strong> ₹5,000</p>
-        </div>
-        <div class="course-box">
-            <h3>Class 9 Math</h3>
-            <p>Focus on calculus, probability, and coordinate geometry.</p>
-            <p><strong>Duration:</strong> 6 months | <strong>Fees:</strong> ₹6,000</p>
-        </div>
-        <div class="course-box">
-            <h3>English for Competitive Exams</h3>
-            <p>Grammar, comprehension, and vocabulary for SSC CHSL, Banking, etc.</p>
-            <p><strong>Duration:</strong> 3 months | <strong>Fees:</strong> ₹4,000</p>
-        </div>
-        <div class="course-box">
-            <h3>Spoken English</h3>
-            <p>Improve fluency and communication skills.</p>
-            <p><strong>Duration:</strong> 2 months | <strong>Fees:</strong> ₹3,000</p>
-        </div>
-    </section>
+  <section class="courses">
+    <h1>Our Courses</h1>
 
-    <footer>
-        <p>&copy; 2025 Ganit Guide. All rights reserved.</p>
-    </footer>
+    <div class="courses-list">
+      <div class="course-item">
+        <h3>Math Mastery</h3>
+        <p>Master the concepts of Mathematics with detailed lessons and practice. Ideal for competitive exams like SSC, Banking, and more.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-item">
+        <h3>English for Exams</h3>
+        <p>Boost your English skills with expert lessons and practical exercises tailored for competitive exams such as SSC CHSL, and Banking exams.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-item">
+        <h3>SSC CHSL Crash Course</h3>
+        <p>Prepare for the SSC CHSL exam with a comprehensive crash course covering all subjects and important exam strategies.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+      <div class="course-item">
+        <h3>Banking Exam Success</h3>
+        <p>Get prepared for various banking exams with our in-depth course, including mock tests, practice questions, and tips from experts.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/911234567890" class="whatsapp-chat" title="Chat on WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Ganit Guide. All rights reserved.</p>
+  </footer>
 </body>
 </html>
