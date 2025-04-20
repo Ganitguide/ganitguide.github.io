@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganit Guide - Math & English Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade {
+      transition: all 0.4s ease-in-out;
+    }
+    .hidden-fade {
+      opacity: 0;
+      transform: scale(0.95);
+      pointer-events: none;
+    }
+    .filter-button.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-white text-gray-800">
+
+  <!-- Header: UNCHANGED -->
+  <header>
+    <div class="logo-header">
+      <img src="images/logo.png" alt="Ganit Guide Logo" class="logo-img">
+      <div class="logo-names">
+        <div class="logo-text">Ganit Guide</div>
+        <div class="logo-bn-text">গণিত গাইড</div>
+      </div>
+    </div>
+    <nav class="glass-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="download.html">Download</li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center mt-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-2">📚 Download Free Study Materials</h2>
+    <p class="text-gray-600 mb-6">Free Notes, NCERT PDFs, and More — Class 9 to 12</p>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="text-center mb-8">
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('all')">All</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-6')">Class 6</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-7')">Class 7</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-8')">Class 8</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-9')">Class 9</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-10')">Class 10</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-11')">Class 11</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('class-12')">Class 12</button>
+    <button class="filter-button m-2 px-4 py-2 rounded-full border hover:bg-indigo-100 transition" onclick="filterClass('competitive')">Competitive</button>
+  </div>
+
+  <!-- Downloads Grid -->
+  <section class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+    <!-- Class 6-10 Notes -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl fade">
+      <h3 class="text-xl font-semibold mb-3 text-indigo-700">📘 Class 6–10 Notes </h3>
+      <ul class="space-y-2 text-blue-600">
+        <li class="class-6"><i class="fa-solid fa-file-pdf text-red-600 mr-2"></i><a href="downloads/notes/class-6.pdf" download>Class 6 Notes</a></li>
+        <li class="class-7"><i class="fa-solid fa-file-pdf text-red-600 mr-2"></i><a href="downloads/notes/class-7.pdf" download>Class 7 Notes</a></li>
+        <li class="class-8"><i class="fa-solid fa-file-pdf text-red-600 mr-2"></i><a href="downloads/notes/class-8.pdf" download>Class 8 Notes</a></li>
+        <li class="class-9"><i class="fa-solid fa-file-pdf text-red-600 mr-2"></i><a href="downloads/notes/class-9.pdf" download>Class 9 Notes</a></li>
+        <li class="class-10"><i class="fa-solid fa-file-pdf text-red-600 mr-2"></i><a href="downloads/notes/class-10.pdf" download>Class 10 Notes</a></li>
+      </ul>
+    </div>
+
+    <!-- NCERT -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl fade class-9 class-10 class-11 class-12">
+      <h3 class="text-xl font-semibold mb-3 text-indigo-700">📘 NCERT Book PDFs</h3>
+      <ul class="space-y-2 text-blue-600">
+        <li class="class-9"><i class="fa-solid fa-book text-green-600 mr-2"></i><a href="downloads/ncert/class-9.pdf" download>Class 6 NCERT</a></li>
+        <li class="class-9"><i class="fa-solid fa-book text-green-600 mr-2"></i><a href="downloads/ncert/class-9.pdf" download>Class 7 NCERT</a></li>
+        <li class="class-9"><i class="fa-solid fa-book text-green-600 mr-2"></i><a href="downloads/ncert/class-9.pdf" download>Class 8 NCERT</a></li>
+        <li class="class-9"><i class="fa-solid fa-book text-green-600 mr-2"></i><a href="downloads/ncert/class-9.pdf" download>Class 9 NCERT</a></li>
+        <li class="class-10"><i class="fa-solid fa-book text-green-600 mr-2"></i><a href="downloads/ncert/class-10.pdf" download>Class 10 NCERT</a></li>
+      </ul>
+    </div>
+
+    <!-- Other Resources -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl fade class-10 class-11 class-12">
+      <h3 class="text-xl font-semibold mb-3 text-indigo-700">📦 Other Resources</h3>
+      <ul class="space-y-2 text-blue-600">
+        <li class="class-10"><i class="fa-solid fa-sheet-plastic text-purple-600 mr-2"></i><a href="downloads/others/formula-sheet.pdf" download>Formula Sheet</a></li>
+        <li class="class-12"><i class="fa-solid fa-file-lines text-orange-600 mr-2"></i><a href="downloads/others/previous-papers.pdf" download>Previous Year Papers</a></li>
+        <li class="class-11"><i class="fa-solid fa-pen-to-square text-teal-600 mr-2"></i><a href="downloads/others/mock-tests.pdf" download>Mock Test Papers</a></li>
+      </ul>
+    </div>
+<!-- Competitive Exam Downloads -->
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl fade">
+    <h3 class="text-xl font-semibold mb-3 text-indigo-700">🎯 Competitive Exam PDFs</h3>
+    <ul class="space-y-2 text-blue-600">
+      <li class="competitive"><i class="fa-solid fa-bolt text-yellow-600 mr-2"></i><a href="downloads/competitive/math-practice.pdf" download>Math Practice Paper</a></li>
+      <li class="competitive"><i class="fa-solid fa-book-open text-cyan-600 mr-2"></i><a href="downloads/competitive/english-tips.pdf" download>English Grammar Tips</a></li>
+      <li class="competitive"><i class="fa-solid fa-file-pen text-pink-600 mr-2"></i><a href="downloads/competitive/reasoning.pdf" download>Logical Reasoning</a></li>
+    </ul>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-600 text-white p-4 text-center">
+    © 2025 Ganit Guide | All Rights Reserved
+  </footer>
+
+  <!-- JavaScript: Filter Logic -->
+  <script>
+    function filterClass(cls) {
+      const items = document.querySelectorAll("section ul li");
+      const buttons = document.querySelectorAll(".filter-button");
+  
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      event.target.classList.add("active");
+  
+      items.forEach((item) => {
+        if (cls === "all" || item.classList.contains(cls)) {
+          item.classList.remove("hidden-fade");
+          item.style.display = "block";
+        } else {
+          item.classList.add("hidden-fade");
+          item.style.display = "none";
+        }
+      });
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      filterClass("all");
+    });
+  </script>  
+  
+</body>
+</html>
